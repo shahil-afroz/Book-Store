@@ -81,7 +81,7 @@ const handleFavourite = async () => {
                 <div className="px-12 py-8 flex gap-8 min-h-screen  bg-zinc-900 items-start">
                     <div className=" w-3/6  ">
                         <div className=" mt-[10vh] bg-zinc-700 p-12 rounded flex justify-around">
-                            <img src={img} alt="/"  className="min-h-screen w-[80vh]"/>
+                            <img src={img} alt="/"  className="h-[96vh] w-[80vh]"/>
                             {
                                 isLoggedIn === true && role === "user" && <div className="flex flex-col ml-5">
                                     <button className="bg-white rounded-full text-3xl p-2" onClick={handleFavourite}><IoHeartOutline /></button>
