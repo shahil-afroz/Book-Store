@@ -3,6 +3,7 @@ import { useState } from "react"
 import {authActions} from "../Store/auth";
 import {useDispatch} from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
+import { toast } from "react-toastify";
 export default function LogIn() {
 
     const [Values, setValus] = useState({
@@ -21,7 +22,7 @@ const dispatch=useDispatch();
         try {
             if (Values.username === "" || Values.password === "") {
               
-                alert("All Fields Are Required")
+              toast("All Fields Are Required")
             } else {
                 const response = await fetch("http://localhost:8081/api/v1/sign-in", {
                     method: 'POST',
@@ -48,9 +49,9 @@ const dispatch=useDispatch();
 
         } catch (error) {
             if (error.response) {
-                console.log(error.response.data);
+                toast(error.response.data);
             } else {
-                console.log("Error:", error.message);
+                toast("Error:", error.message);
             }
 
         }

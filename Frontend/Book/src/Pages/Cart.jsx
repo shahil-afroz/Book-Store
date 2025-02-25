@@ -101,10 +101,12 @@ export default function Cart() {
       }
       {
         cart && cart.length === 0 && (
-          <div className="h-screen">
-            <div className="h-[100%] flex flex-col items-center justify-center">
-              <h1 className="text-5xl font-semibold text-zinc-700" >Empty Cart</h1>
-            </div>
+          <div className="h-screen flex flex-col justify-center items-center ">
+            
+              <h1 className="text-5xl font-semibold text-zinc-700 items-center justify-center" >Empty Cart</h1>
+       
+            <img src=".\Empty_cart.png" alt="" className="" />
+           
           </div>
         )
       }

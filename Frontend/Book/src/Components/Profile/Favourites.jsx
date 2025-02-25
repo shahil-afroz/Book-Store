@@ -22,7 +22,10 @@ export default function Favourites(){
 <>
 {!favourites && (<div className="flex justify-center items-center my-8"><Loader /></div>)}
         {
-          favourites &&  favourites.length===0&& (<div className="flex justify-center h-[100%] items-center text-5xl font-semibold text-zinc-700 ">No Favourite Book</div>)
+          favourites &&  favourites.length===0&& (<div className="flex flex-col  justify-center h-[100%] items-center">
+          <h1 className="text-5xl font-semibold text-zinc-700 ">No Favourite Book</h1>
+          <img src="./No_favourite.png" alt="" />
+            </div>)
         }
         <div className="my-8 grid grid-cols-4 gap-4">
                 {favourites && favourites.map((items, i) => (
